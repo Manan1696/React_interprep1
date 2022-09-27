@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactDay1</title>
+</head>
+<body bgcolor="lightblue">
+    <h1>Day-1 React Interview Questions</h1>
+
+    <h2>Q1. What is Virtual DOM?</h2>
+    <p>The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory
+        and synced with the "real" DOM. It's a step that happens between the render function being called and the
+        displaying of elements on the screen. This entire process is called reconciliation. (or) DOM is a document
+        object model, created by converting HTML CSS and JS Real DOM, which is an object which gets created whenever any
+        React application gets loaded on the screen for the first time., whenever React components gets mounted on the
+        screen for the first time. Now when any user makes any changes on the screen like button click because of which
+        the state variable will get updated so in this case the changes will not directly go to Real DOM , instead in
+        react we have concept known Virtual DOM. So we are having two virtual doms, one virtual dom gets created at the
+        time of mounting of react component so it is a copy of your real dom. Another virtual dom is the dom which
+        contains the new changes, updated state variables values. Now these two virtual doms will get compared with each
+        other and will check for the new changes. this complete procedure is known as diffing algorithm. Now the new
+        changes will be updated in your Real dom. this procedure is known as Recoinciliation.</p>
+        <hr/>
+
+    <h2>Q2. What is SPA ?</h2>
+    <p>A single-page application(SPA) is an application that loads a single HTML page and all the necessary assets 
+        (such as JavaScript and CSS) required for the application to run.Any interactions with the page or subsequent 
+        pages do not require a round trip to the server which means the page is not reloaded.</p>
+        <hr/>
+
+    <h2>Q3. What is difference between Functional and Class component?</h2>
+    <h2>Functional Component:</h2>
+        <ul>
+            <li>A functional component is just a plain JavaScript function that accepts props as an argument and returns a
+                React element.</li>
+            <li>There is no render method used in functional components.</li>
+            <li>Also known as Stateless components as they simply accept data and display them in some form, that they are
+                mainly responsible for rendering UI.</li>
+            <li>React lifecycle methods (for example, componentDidMount) cannot be used in functional components.</li>
+            <li>Hooks can be easily used in functional components to make them Stateful. example: const [name,SetName]=
+                React.useState(" ")</li>
+            <li> Constructors are not used.</li>
+        </ul>
+    <h2>Class Component:</h2>
+        <ul>
+            <li>A class component requires you to extend from React. Component and create a render function which returns a
+                React element.</li>
+            <li>It must have the render() method returning JSX (which is syntactically similar to HTML)</li>
+            <li>Also known as Stateful components because they implement logic and state.</li>
+            <li>React lifecycle methods can be used inside class components (for example componentDidMount).</li>
+            <li>It requires different syntax inside a class component to implement hooks. example: constructor(props) {
+                super(props); this.state = {name: ‘ ‘} }</li>
+            <li> Constructor are used as it needs to store state.</li>
+        </ul>
+        <hr/>
+
+    <h2>Q4. What does mean by state and its use in react?</h2>
+        <ul>
+            <li>State is similar to props, but it is private and fully controlled by the component ,i.e., it is not accessible to any other component till the owner component decides to pass it.</li>
+            <li>it is used to manipulate data within a component.</li>
+            <li>it can be declared within a Constructor or outside constructor.</li>
+            <li>it can be changed using this.setState only.</li>
+            <li>it changes can be asynchronous.</li>
+        </ul>
+        <hr/>
+
+    <h2>Q5. What is JSX and why do we use it instead of js?</h2>
+    <p>JSX is popularly used in React, as it makes the job of building an application much easier. JSX is an addition to the JavaScript syntax which is a mixture of both HTML and JavaScript. Both JS and JSX are interchangeable but JSX makes the code easier to understand for users.</p>
+    <hr/>
+        
+    <h2>Q6. What is package.json?</h2>
+    <p>It is a JSON file that lives in the root directory of your project. Your package.json holds important information about the project. It contains human-readable metadata about the project</p>
+    <hr/>
+     
+</body>
+</html>
